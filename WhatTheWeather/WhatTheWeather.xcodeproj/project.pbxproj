@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C1CD5B84F027D766783C3D1 /* Pods_WhatTheWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1A9B5A80BDBCA96D33386A /* Pods_WhatTheWeather.framework */; };
+		8ABE76FB1E2391BB00946C9F /* WeatherChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE76FA1E2391BB00946C9F /* WeatherChartViewController.swift */; };
+		8ABE76FD1E2399D800946C9F /* WeatherYearsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE76FC1E2399D800946C9F /* WeatherYearsListTableViewController.swift */; };
+		8ABE76FF1E239B6B00946C9F /* WeatherYearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABE76FE1E239B6B00946C9F /* WeatherYearCell.swift */; };
 		C4397AFB1E0419A700122A72 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C482F7ED1DFFD9870010E283 /* DownloadManager.swift */; };
 		C4397AFC1E0419AB00122A72 /* ParseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C482F7EF1E0064B70010E283 /* ParseManager.swift */; };
 		C4397AFD1E0419AF00122A72 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C482F7F11E0065110010E283 /* DataModel.swift */; };
@@ -34,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F274DF9DE649384A1AABD53 /* Pods-WhatTheWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatTheWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhatTheWeather/Pods-WhatTheWeather.debug.xcconfig"; sourceTree = "<group>"; };
+		2D1A9B5A80BDBCA96D33386A /* Pods_WhatTheWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhatTheWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ABE76FA1E2391BB00946C9F /* WeatherChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherChartViewController.swift; path = ViewControllers/WeatherChartViewController.swift; sourceTree = "<group>"; };
+		8ABE76FC1E2399D800946C9F /* WeatherYearsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherYearsListTableViewController.swift; path = ViewControllers/WeatherYearsListTableViewController.swift; sourceTree = "<group>"; };
+		8ABE76FE1E239B6B00946C9F /* WeatherYearCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherYearCell.swift; path = ViewControllers/WeatherYearCell.swift; sourceTree = "<group>"; };
+		8E63BF2328AB2F1942F8C3A4 /* Pods-WhatTheWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhatTheWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhatTheWeather/Pods-WhatTheWeather.release.xcconfig"; sourceTree = "<group>"; };
 		C4397AF11E04195200122A72 /* WhatTheWeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatTheWeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4397AF51E04195200122A72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4397AFE1E0442C900122A72 /* DownloadManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManagerTests.swift; sourceTree = "<group>"; };
@@ -63,12 +73,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C1CD5B84F027D766783C3D1 /* Pods_WhatTheWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51C21D646F5603B94BB126AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F274DF9DE649384A1AABD53 /* Pods-WhatTheWeather.debug.xcconfig */,
+				8E63BF2328AB2F1942F8C3A4 /* Pods-WhatTheWeather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6F54DA4B574B2DCF6DC46517 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D1A9B5A80BDBCA96D33386A /* Pods_WhatTheWeather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C4397AF21E04195200122A72 /* WhatTheWeatherTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +121,8 @@
 				C482F7D91DFFD9400010E283 /* WhatTheWeather */,
 				C4397AF21E04195200122A72 /* WhatTheWeatherTests */,
 				C482F7D81DFFD9400010E283 /* Products */,
+				51C21D646F5603B94BB126AD /* Pods */,
+				6F54DA4B574B2DCF6DC46517 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +164,9 @@
 			children = (
 				C482F7F41E0066BC0010E283 /* WeatherTableViewController.swift */,
 				C48F331B1E01CCFA006C251A /* WeatherTableViewCell.swift */,
+				8ABE76FA1E2391BB00946C9F /* WeatherChartViewController.swift */,
+				8ABE76FC1E2399D800946C9F /* WeatherYearsListTableViewController.swift */,
+				8ABE76FE1E239B6B00946C9F /* WeatherYearCell.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -163,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C482F7E91DFFD9400010E283 /* Build configuration list for PBXNativeTarget "WhatTheWeather" */;
 			buildPhases = (
+				C9FA582D424165F5452B0D25 /* [CP] Check Pods Manifest.lock */,
 				C482F7D31DFFD9400010E283 /* Sources */,
 				C482F7D41DFFD9400010E283 /* Frameworks */,
 				C482F7D51DFFD9400010E283 /* Resources */,
+				536649A899C697E5A51E4E12 /* [CP] Embed Pods Frameworks */,
+				8714DEFBAD8BD9850FFAC488 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,7 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ruslan Zinko";
 				TargetAttributes = {
 					C4397AF01E04195200122A72 = {
@@ -236,6 +272,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		536649A899C697E5A51E4E12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatTheWeather/Pods-WhatTheWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8714DEFBAD8BD9850FFAC488 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhatTheWeather/Pods-WhatTheWeather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9FA582D424165F5452B0D25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4397AED1E04195200122A72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -252,13 +336,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ABE76FB1E2391BB00946C9F /* WeatherChartViewController.swift in Sources */,
 				C482F7F21E0065110010E283 /* DataModel.swift in Sources */,
+				8ABE76FD1E2399D800946C9F /* WeatherYearsListTableViewController.swift in Sources */,
 				C4457FAD1E091AB2008469DF /* DataManager.swift in Sources */,
 				C48F331C1E01CCFA006C251A /* WeatherTableViewCell.swift in Sources */,
 				C482F7EE1DFFD9870010E283 /* DownloadManager.swift in Sources */,
 				C482F7DB1DFFD9400010E283 /* AppDelegate.swift in Sources */,
 				C482F7F51E0066BC0010E283 /* WeatherTableViewController.swift in Sources */,
 				C482F7F01E0064B70010E283 /* ParseManager.swift in Sources */,
+				8ABE76FF1E239B6B00946C9F /* WeatherYearCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +423,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -386,6 +474,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -413,7 +502,9 @@
 		};
 		C482F7EA1DFFD9400010E283 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F274DF9DE649384A1AABD53 /* Pods-WhatTheWeather.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = WhatTheWeather/Info.plist;
@@ -426,7 +517,9 @@
 		};
 		C482F7EB1DFFD9400010E283 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E63BF2328AB2F1942F8C3A4 /* Pods-WhatTheWeather.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = WhatTheWeather/Info.plist;

@@ -1,4 +1,4 @@
-//
+    //
 //  DataModel.swift
 //  WhatTheWeather
 //
@@ -21,7 +21,6 @@ class DataModel {
     
     
     init(array: [String]?) {
-        
         self.year              = (array?[0])!
         self.month             = (array?[1])!
         self.maxTemperature    = (array?[2])!
@@ -30,6 +29,12 @@ class DataModel {
         self.rain              = (array?[5])!
         self.sunHours          = (array?[6])!
        
+        if (self.maxTemperature.contains("*")) {
+            maxTemperature = maxTemperature.replacingOccurrences(of: "*", with: "", options: NSString.CompareOptions.literal, range: nil)
+        } else if (self.minTemperature.contains("*")) {
+            minTemperature = minTemperature.replacingOccurrences(of: "*", with: "", options: NSString.CompareOptions.literal, range: nil)
+        }
+        
         if (array?.count)! == 8 {
             self.provisional = (array?[7])!
         } else {

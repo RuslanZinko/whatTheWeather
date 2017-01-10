@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'WhatTheWeather' do
+pod 'Charts'
+end

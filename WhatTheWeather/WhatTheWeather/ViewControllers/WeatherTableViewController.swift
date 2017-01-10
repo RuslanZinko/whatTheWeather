@@ -30,7 +30,7 @@ class WeatherTableViewController: UITableViewController, ParseManagerDelegate {
     //MARK: ParseManagerDelegate
     
     func updateWith(data: Array<AnyObject>) {
-        objectsData = data
+        objectsData = data.reversed()
         indicator.stopAnimating()
         indicator.hidesWhenStopped = true
         tableView.reloadData()
@@ -70,6 +70,4 @@ class WeatherTableViewController: UITableViewController, ParseManagerDelegate {
         indicator.center = self.view.center
         self.view.addSubview(indicator)
     }
-
    }
-

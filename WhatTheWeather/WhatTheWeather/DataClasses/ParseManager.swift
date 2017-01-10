@@ -31,7 +31,6 @@ class ParseManager: NSObject {
                 
                 var weatherData = readings?[index].components(separatedBy: " ")
                 weatherData = weatherData?.filter({!$0.isEmpty})                        //sorting data which we need
-                
                 let dataModel = DataModel(array: weatherData)
                 
                 self.objArray?.append(dataModel)

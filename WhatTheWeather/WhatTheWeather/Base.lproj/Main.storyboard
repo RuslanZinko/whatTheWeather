@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="47O-JR-k9i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="47O-JR-k9i">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="139"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YtO-pJ-a5y" id="rKR-Su-rDw">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="139"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5o-8w-G3C">
@@ -182,11 +182,124 @@
                             <outlet property="delegate" destination="iV4-yM-aIQ" id="tpU-Yf-9hy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pWH-UI-Iuf"/>
+                    <navigationItem key="navigationItem" id="pWH-UI-Iuf">
+                        <barButtonItem key="rightBarButtonItem" title="Chart" style="done" id="XWk-3I-0TL">
+                            <connections>
+                                <segue destination="jgN-Fm-gip" kind="show" id="5YD-P5-Cow"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Qd-sJ-ulZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1489" y="124"/>
+        </scene>
+        <!--Weather Years List Table View Controller-->
+        <scene sceneID="xQi-dd-qSx">
+            <objects>
+                <tableViewController id="jgN-Fm-gip" customClass="WeatherYearsListTableViewController" customModule="WhatTheWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vjj-U2-K14">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="YearCell" id="t6d-Sd-cnw" customClass="WeatherYearCell" customModule="WhatTheWeather" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t6d-Sd-cnw" id="Onu-Ij-Zto">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-50-uyb">
+                                            <rect key="frame" x="52" y="11" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="xZi-Rp-anz"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVH-MV-n6o">
+                                            <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="42" id="6IZ-r0-uaN"/>
+                                                <constraint firstAttribute="height" constant="21" id="ZU6-8G-uCR"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XVH-MV-n6o" firstAttribute="top" secondItem="Onu-Ij-Zto" secondAttribute="topMargin" constant="3" id="5ne-Ql-kiW"/>
+                                        <constraint firstItem="sUF-50-uyb" firstAttribute="centerY" secondItem="XVH-MV-n6o" secondAttribute="centerY" id="WRK-bQ-DFm"/>
+                                        <constraint firstItem="XVH-MV-n6o" firstAttribute="leading" secondItem="Onu-Ij-Zto" secondAttribute="leadingMargin" id="acf-tK-qYj"/>
+                                        <constraint firstItem="sUF-50-uyb" firstAttribute="leading" secondItem="XVH-MV-n6o" secondAttribute="trailing" constant="2" id="jNV-Fv-hPB"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="yearLabel" destination="sUF-50-uyb" id="rk0-a6-NdC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jgN-Fm-gip" id="wbQ-So-m2a"/>
+                            <outlet property="delegate" destination="jgN-Fm-gip" id="bc7-ZQ-OKe"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2R9-2h-cDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2191.875" y="123.59154929577466"/>
+        </scene>
+        <!--Weather Chart View Controller-->
+        <scene sceneID="3dj-hL-VVw">
+            <objects>
+                <viewController storyboardIdentifier="Weather Chart View Controller" id="nhr-ze-HZa" customClass="WeatherChartViewController" customModule="WhatTheWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3BM-LV-Zc9"/>
+                        <viewControllerLayoutGuide type="bottom" id="tfD-Lb-Dsg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Qk-L4-W0A">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Am-HI-aXS" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="42" width="320" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7SI-R7-Eax">
+                                <rect key="frame" x="102" y="6" width="117" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="8xo-1s-AoE"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Min C°"/>
+                                    <segment title="Max C°"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChangedWithSegment:" destination="nhr-ze-HZa" eventType="valueChanged" id="XB5-US-0vT"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Am-HI-aXS" firstAttribute="top" secondItem="7SI-R7-Eax" secondAttribute="bottom" constant="8" id="2fp-vQ-Evo"/>
+                            <constraint firstAttribute="trailing" secondItem="0Am-HI-aXS" secondAttribute="trailing" id="2mZ-FD-7fc"/>
+                            <constraint firstItem="7SI-R7-Eax" firstAttribute="top" secondItem="0Qk-L4-W0A" secondAttribute="topMargin" constant="6" id="66k-Ka-Y30"/>
+                            <constraint firstItem="tfD-Lb-Dsg" firstAttribute="top" secondItem="0Am-HI-aXS" secondAttribute="bottom" id="DSF-vk-sG0"/>
+                            <constraint firstItem="7SI-R7-Eax" firstAttribute="centerX" secondItem="0Qk-L4-W0A" secondAttribute="centerX" id="SBS-m2-mfL"/>
+                            <constraint firstItem="0Am-HI-aXS" firstAttribute="leading" secondItem="0Qk-L4-W0A" secondAttribute="leading" id="wC4-jZ-8CI"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="barChartView" destination="0Am-HI-aXS" id="wzw-Ye-Pfn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yw-PR-CUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2901" y="124"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7p3-Wt-TfZ">
